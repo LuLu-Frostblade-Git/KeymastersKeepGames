@@ -68,7 +68,7 @@ class MyGame(Game):
 
                 label="Clear the CAVE (Cave)",
                 data={
-                    "CAVE": (self.CAVE, 1),
+                    "CAVE": (self.cave, 1),
                 },
               
                 is_time_consuming=False,
