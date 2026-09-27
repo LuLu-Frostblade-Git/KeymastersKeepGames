@@ -51,6 +51,19 @@ class MyGame(Game):
 
                 weight=3,
             ),
+            GameObjectiveTemplate(
+
+                label="Build (or add to a town) a MILITARY_BUILDING in the BIOME",
+                data={
+                    "MILITARY_BUILDING": (self.military_building, 1),
+                    "BIOME": (self.biome, 1),
+                },
+              
+                is_time_consuming=False,
+                is_difficult=False,
+
+                weight=3,
+            ),
             
     crafting_building = [
         "Blacksmith",
@@ -71,6 +84,17 @@ class MyGame(Game):
         "Market Stall",
         "Merchant House"
         "Slaves Market"
+        "Shrines"
+    ]
+    military_building = [
+        "Barracks",
+        "Watchtower",
+        "Training Yard",
+        "Archery Range",
+        "Prison / Jail",
+        "Town Gate",
+        "Rampart",
+        "Fortified Keep",
     ]
     biome = [
         "Desert",
