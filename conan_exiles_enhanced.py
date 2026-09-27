@@ -36,7 +36,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=10,
             ),
             GameObjectiveTemplate(
 
@@ -49,7 +49,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=10,
             ),
             GameObjectiveTemplate(
 
@@ -74,7 +74,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=2,
+                weight=1,
             ),
             GameObjectiveTemplate(
 
@@ -86,7 +86,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=2,
+                weight=1,
             ),
             GameObjectiveTemplate(
 
@@ -98,7 +98,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=2,
+                weight=1,
             ),
             GameObjectiveTemplate(
 
@@ -110,7 +110,7 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=2,
+                weight=1,
             ),
             GameObjectiveTemplate(
 
