@@ -38,6 +38,19 @@ class MyGame(Game):
 
                 weight=3,
             ),
+            GameObjectiveTemplate(
+
+                label="Build (or add to a town) a SOCIAL_BUILDING in the BIOME",
+                data={
+                    "SOCIAL_BUILDING": (self.social_building, 1),
+                    "BIOME": (self.biome, 1),
+                },
+              
+                is_time_consuming=False,
+                is_difficult=False,
+
+                weight=3,
+            ),
             
     crafting_building = [
         "Blacksmith",
@@ -48,7 +61,17 @@ class MyGame(Game):
         "Mason's Workshop",
         "Artisan Workshop", 
     ]
-
+    social_building = [
+        "House",
+        "Tavern",
+        "Inn",
+        "Fisherman's Hut",
+        "Stable",
+        "Treasure Room",
+        "Market Stall",
+        "Merchant House"
+        "Slaves Market"
+    ]
     biome = [
         "Desert",
         "Highlands",
