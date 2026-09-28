@@ -27,23 +27,45 @@ class MyGame(Game):
         return [
             GameObjectiveTemplate(
 
-                label="Build (or add to a town) a CRAFTING_BUILDING in the BIOME",
+                label="Build (or add to a town) a CRAFTING_BUILDING in the River Biome",
                 data={
                     "CRAFTING_BUILDING": (self.crafting_building, 1),
-                    "BIOME": (self.biome, 1),
                 },
               
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=10,
+                weight=25,
             ),
             GameObjectiveTemplate(
 
-                label="Build (or add to a town) a SOCIAL_BUILDING in the BIOME",
+                label="Build (or add to a town) a SOCIAL_BUILDING in the River Biome",
                 data={
                     "SOCIAL_BUILDING": (self.social_building, 1),
-                    "BIOME": (self.biome, 1),
+                },
+              
+                is_time_consuming=False,
+                is_difficult=False,
+
+                weight=25,
+            ),
+            GameObjectiveTemplate(
+
+                label="Build (or add to a town) a MILITARY_BUILDING in the River Biome",
+                data={
+                    "MILITARY_BUILDING": (self.military_building, 1),
+                },
+              
+                is_time_consuming=False,
+                is_difficult=False,
+
+                weight=15,
+            ),
+            GameObjectiveTemplate(
+
+                label="Clear the RIVER_CAVE in the River Biome",
+                data={
+                    "RIVER_CAVE": (self.river_cave, 1),
                 },
               
                 is_time_consuming=False,
@@ -53,80 +75,19 @@ class MyGame(Game):
             ),
             GameObjectiveTemplate(
 
-                label="Build (or add to a town) a MILITARY_BUILDING in the BIOME",
+                label="Clear RIVER_CAMP in the River Biome",
                 data={
-                    "MILITARY_BUILDING": (self.military_building, 1),
-                    "BIOME": (self.biome, 1),
+                    "RIVER_CAMP": (self.river_camp, 1),
                 },
               
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=15,
             ),
             GameObjectiveTemplate(
 
-                label="Clear the CAVE (Cave)",
-                data={
-                    "CAVE": (self.cave, 1),
-                },
-              
-                is_time_consuming=False,
-                is_difficult=False,
-
-                weight=1,
-            ),
-            GameObjectiveTemplate(
-
-                label="Clear the DUNGEON (Dungeon)",
-                data={
-                    "DUNGEON": (self.dungeon, 1),
-                },
-              
-                is_time_consuming=False,
-                is_difficult=False,
-
-                weight=1,
-            ),
-            GameObjectiveTemplate(
-
-                label="Clear the VAULT (Siptah Vault)",
-                data={
-                    "VAULT": (self.vault, 1),
-                },
-              
-                is_time_consuming=False,
-                is_difficult=False,
-
-                weight=1,
-            ),
-            GameObjectiveTemplate(
-
-                label="Activate the LEYSHRINE (Siptah)",
-                data={
-                    "LEYSHRINE": (self.leyshrine, 1),
-                },
-              
-                is_time_consuming=False,
-                is_difficult=False,
-
-                weight=1,
-            ),
-            GameObjectiveTemplate(
-
-                label="Clear a CAMP",
-                data={
-                    "CAMP": (self.camp, 1),
-                },
-              
-                is_time_consuming=False,
-                is_difficult=False,
-
-                weight=3,
-            ),
-            GameObjectiveTemplate(
-
-                label="Rescue PRISONER from thrall cage.",
+                label="Rescue PRISONER from thrall cage in the River Biome.",
                 data={
                     "PRISONER": (self.prisoner, 1),
                 },
@@ -134,11 +95,11 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=15,
             ),
             GameObjectiveTemplate(
 
-                label="Capture a THRALL and drag im to a Well of Pain.",
+                label="Capture THRALL and drag im to a Well of Pain in the River Biome.",
                 data={
                     "THRALL": (self.thrall, 1),
                 },
@@ -146,19 +107,19 @@ class MyGame(Game):
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=15,
             ),
             GameObjectiveTemplate(
 
-                label="Gather RESOURCE.",
+                label="Gather RIVER_RESOURCE in the River Biome.",
                 data={
-                    "RESOURCE": (self.resource, 1),
+                    "RIVER_RESOURCE": (self.river_resource, 1),
                 },
               
                 is_time_consuming=False,
                 is_difficult=False,
 
-                weight=5,
+                weight=15,
             ),
         ]
         
@@ -193,98 +154,19 @@ class MyGame(Game):
         "Rampart",
         "Fortified Keep",
     ]
-    biome = [
-        "Desert",
-        "Highlands",
-        "Jungle",
-        "Noob River",
-        "Savanna",
-        "Frozen North",
-        "Tundra",
-        "Volcano",
-        "North Coast (Siptah)",
-        "South Coast (Siptah)",
-        "East Coast (Siptah)",
-        "West Coast (Siptah)",
-        "Redwood Forests (Siptah)",
-        "Western Valleys & Peaks (Siptah)",
-        "Southern Islands (Siptah)",
+    river_cave = [
+        "Hanuman's Grotto cave",
+        "Sinner's Refuge cave",
+        "Dregs dungeon",
     ]
-    cave = [
-        "Bit-Yakin's Seal",
-        "Cavern of Fiends",
-        "Dragonmouth",
-        "Executioners Entrance",
-        "Fuming Cave (Siptah)",
-        "Gallaman's Tomb",
-        "Glowing Cavern (Siptah)",
-        "Hanuman's Grotto",
-        "Jhil's Roost",
-        "Lockstone Cave",
-        "Scuttler's Shortcut",
-        "Shaleback Hollow",
-        "Sinner's Refuge",
-        "Skittering Cavern",
-        "Barrow King",
-        "Crevice",
-        "Depths (Siptah)",
-        "Floe",
-        "High Way",
-        "Passage",
-        "Scraps",
-        "Undergate",
-        "Warren of Degenerates",
-        "Weaver's Hollow",
-        "Xalthar's Refuge",
-    ]
-    dungeon = [
-        "Dregs",
-        "Cyclopean Halls",
-        "Wine Cellar",
-        "Warmaker's Sanctuary",
-        "Midnight Grove",
-        "Undergate",
-        "Black Keep",
-        "Well of Skelos",
-        "Passage",
-        "Palace of the Witch Queen",
-        "The Sunken City",
-    ]
-    vault = [
-        "Sanctuary of the Serpent",
-        "Harbor of the Drowned",
-        "Volary of Jhil",
-        "Volary of the Harpy",
-        "Demense of the Demon Spiders",
-        "Harbor of the Twice Drowned",
-        "Asylum of the Outsiders",
-        "Accursed Citadel",
-        "Refuge of the Gremlins",
-        "Refuge of the Goblinoids",
-        "Asylum of the Fiends",
-        "Den of the Wolfmen",
-        "Sanctuary of the Snakemen",
-        "Den of the Wolf-brothers",
-        "Bastion of the Bat-demons",
-    ]
-    leyshrine = [
-        "Leyshrine of the Birdmen",
-        "Leyshrine of the Demon",
-        "Leyshrine of the Goblinoid",
-        "Leyshrine of the Serpent",
-        "Leyshrine of the Fiends",
-        "Leyshrine of the Drowned",
-    ]
-    camp = [
-        "Black Hand Camp",
-        "Cimmerian Camp",
-        "Dafari Camp",
-        "Desert Dogs Camp",
-        "Exile Camp",
-        "Frost Giant Camp",
-        "Lemurian Camp",
-        "Relic Hunter Camp",
-        "Vanir Camp",
+    river_camp = [
+        "an Exile camp",
+        "the Lookout Point camp",
+        "the Marrowman's Height camp",
+        "the Narrowneck Span camp",
+        "the Riverwatch Camp",
+        "the Scavenger's Berth camp",
+        "the Skulker's End camp",
     ]
     prisoner = [
         "1 prisoner",
@@ -306,36 +188,17 @@ class MyGame(Game):
         "Tanner",
         "Taskmaster",
     ]
-    resource = [
-        "200 x Black Ice ore",
-        "500 x Brimstone",
-        "500 x Coal",
-        "200 x Crystal",
-        "200 x Ice",
-        "500 x Iron ore",
-        "200 x Obsidian ore",
-        "100 x Silverstone",
-        "100 x Star Metal ore",
-        "100 x Goldstone",
-        "1000 x Stone",
-        "1000 x Wood Log",
-        "200 x Driftwood",
-        "200 x Branch",
-        "100 x Glowing Goop",
-        "200 x Gossamer",
-        "200 x Resin",
-        "50 x Blood",
-        "50 x Demon Blood",
-        "50 x Bone",
-        "200 x Chitin",
-        "50 x Feral Flesh",
-        "100 x Fur",
+    river_resource = [
+        "100 x Crystal",
+        "100 x Iron ore",
+        "250 x Stone",
+        "250 x Wood Log",
+        "100 x Branch",
         "100 x Hide",
-        "50 x Thick Hide",
-        "100 x Reptile Hide",
-        "50 x Savoury Flesh",
-        "5 x Weathered Skull",
-        "5 x Blood Crystal",
         "50 x Aloe Leaves",
-        "200 x Plant Fibery",
+        "100 x Plant Fiber",
+        "10 x Mushroom",
+        "10 x Yellow Lotus",
+        "10 x Orange Phykos",
+        "10 x Glowing Goop",
     ]
